@@ -277,7 +277,7 @@
       </div>
 
       <div class="cv">
-        <button class="download">Download CV</button>
+        <button onclick="openPDF()" class="download">Download CV</button>
       </div>
     </section>
   </main>
@@ -320,6 +320,11 @@
     </div>
   </footer>
   <script src="chatbot.js"></script>
+  <script>
+    function openPDF() {
+        window.open('cv.pdf', '_blank'); // Opens in a new tab
+    }
+    </script>
 </body>
 </html>
 

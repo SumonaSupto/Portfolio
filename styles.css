@@ -83,6 +83,7 @@ ul li a {
   transition: 0.3s;
 }
 
+
 ul li a:hover {
   border-top-color: var(--primary-color);
   border-bottom-color: var(--primary-color);
@@ -338,7 +339,7 @@ main section{
 
 }
 
-.download {
+.download{
   border-radius: 5px;
   background-color: var(--primary-color);
   border: 0;
@@ -346,8 +347,10 @@ main section{
   font-size: 20px;
   font-weight: 700;
   padding: 15px 35px;
+  text-decoration: none;
 
 }
+
 
 .download:hover {
   background-color:#90EE90;
