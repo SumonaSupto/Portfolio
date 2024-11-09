@@ -260,6 +260,7 @@ h3 {
   display: flex;
   justify-content: space-around;
   border-radius: 100%;
+  margin-top: 40px;
 }
 
 .about_info{
@@ -386,6 +387,7 @@ footer{
   width: 100px;
   text-align: center;
   margin: 100px;
+  margin-left: 50px;
   line-height: 100px;
 }
 
@@ -401,3 +403,227 @@ textarea {
   width: 100%;
 }
 
+
+
+
+
+
+
+
+/* Chatbot Floating Button */
+.chatbot-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  outline: none;
+  border: none;
+  height: 80px; 
+  width: 80px;  
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #AF33EA;
+  transition: all 0.3s ease;
+  z-index: 999999;
+  animation: floater 1.5s infinite;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@keyframes floater {
+  0% { transform: translateY(-10%); }
+  50% { transform: translateY(10%); }
+  100% { transform: translateY(-10%); }
+}
+
+body.show-chatbot .chatbot-btn {
+  transform: rotate(90deg);
+}
+
+.chatbot-btn-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.chatbot {
+  position: fixed;
+  right: 35px;
+  bottom: 90px;
+  height: 28rem;
+  width: 22rem;
+  background: #FAF5FF;
+  border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  transform-origin: bottom right;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+              rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+              rgba(0, 0, 0, 0.12) 0px 4px 6px,
+              rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+body.show-chatbot .chatbot {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 9999999;
+}
+
+.chatbot header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FAF5FF;
+  background: #AF33EA;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+
+.chatbot header .close-btn {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header-container .header-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.header-container .heading h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.header-container .heading p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+}
+
+.chatbox {
+  overflow-y: auto;
+  height: calc(100% - 130px);
+  padding: 20px;
+  display: flex;
+
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.chat-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #f2f2f2;
+  gap: 8px;
+}
+
+.chat-input textarea {
+  height: 2rem;
+  width: 70%;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  padding: 5px 10px;
+  resize: none;
+  font-size: 0.95rem;
+}
+
+
+.voice-icon {
+  color: #FAF5FF;
+  background: #4CAF50; 
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px; 
+}
+
+
+.chat-input button.send-icon {
+  color: #FAF5FF;
+  background: #AF33EA;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+.send-button, .voice-button {
+  color: #FAF5FF;
+  background: #AF33EA;
+  border: none;
+  padding: 0.3rem 0.7rem; 
+  cursor: pointer;
+  font-size: 0.9rem; 
+  border-radius: 0.5rem; 
+}
+
+.send-button {
+  background: #AF33EA; 
+}
+
+.voice-button {
+  background: #4CAF50; 
+}
+
+
+.chat-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+}
+
+.user-message {
+  background-color: #e1e1e1;
+  align-self: flex-end;
+  color: #000;
+}
+
+.bot-message {
+  background-color: #AF33EA;
+  color: #FAF5FF;
+  align-self: flex-start;
+}
+
+
+.chatbox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbox::-webkit-scrollbar-track {
+  background: #FAF5FF;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.close-btn i {
+  font-size: 1.2rem;  
+  color: white;
+}

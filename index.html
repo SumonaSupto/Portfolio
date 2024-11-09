@@ -9,6 +9,35 @@
     <title>Responsive Portfolio</title>
   </head>
   <body>
+    
+    <div class="chatbot">
+        <header>
+        
+            <span class="close-btn" onclick="toggleChatbot()"><i class="fas fa-times"></i></span>
+            <div class="header-container">
+                <img src="robot.png" alt="Chatbot Logo" class="header-image">
+                <div class="heading">
+                    <h3>Bot For Query</h3>
+                    <p>online</p>
+                </div>
+            </div>
+        </header>
+        
+        <div id="chat-box" class="chatbox"></div>
+        
+        <form id="chat-form" class="chat-input">
+            <textarea id="user-input" placeholder="Type a message here..." spellcheck="false" required></textarea>
+            <button type="submit" id="send-btn" class="send-button">Send</button>
+            <!-- <button type="button" id="voice-btn" class="voice-button" onclick="startVoiceInput()">&#x1F3A4;</button> -->
+        </form>
+    </div>
+    
+    <button class="chatbot-btn" onclick="toggleChatbot()">
+        <img src="Asisbot.png" alt="Chatbot Button Image" class="chatbot-btn-image">
+    </button>
+    
+    
+    
     <header>
     <nav>
       <div class="nav__content">
@@ -257,21 +286,18 @@
     <div class="footer_feild">
       <h3 class="section_title">Lets Connect</h3>
       <p class="section_desc">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-        dignissimos nostrum qui eos voluptas, sequi provident eum. Laboriosam
-        doloribus praesentium, voluptatem, odit dolor dolore voluptates aut
-        hic ipsa quasi aspernatur?
+        I’d love to hear from you! Whether you have a project in mind or just want to say hello, feel free to get in touch. I’m currently available for freelance projects in Web Development.<br>Reach Me Out At
       </p>
 
       <div class="social_links">
        <a class="icon" href="https://www.facebook.com/">
-        <i class="fa-brands fa-facebook fa-3x"></i>
+        <i class="fa-brands fa-facebook fa-3x" style="color: #0e5ce1;"></i>
        </a>
        <a class="icon" href="https://telegram.org/">
-        <i class="fa-brands fa-telegram fa-3x"></i>
+        <i class="fa-brands fa-telegram fa-3x" style="color: #141894;"></i>
        </a>
        <a class="icon" href="https://www.whatsapp.com/">
-        <i class="fa-brands fa-whatsapp fa-3x"></i>
+        <i class="fa-brands fa-whatsapp fa-3x" style="color: #1bde42;"></i>
        </a>
       </div>
     </div>
@@ -293,6 +319,7 @@
       </form>
     </div>
   </footer>
+  <script src="chatbot.js"></script>
 </body>
 </html>
 
