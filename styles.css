@@ -420,7 +420,7 @@ textarea {
   right: 35px;
   outline: none;
   border: none;
-  height: 80px; 
+  height: 100px; 
   width: 80px;  
   display: flex;
   cursor: pointer;
@@ -454,7 +454,7 @@ body.show-chatbot .chatbot-btn {
   position: fixed;
   right: 35px;
   bottom: 90px;
-  height: 28rem;
+  height: 38rem;
   width: 22rem;
   background: #FAF5FF;
   border-radius: 15px;
